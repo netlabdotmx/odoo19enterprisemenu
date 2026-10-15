@@ -18,5 +18,6 @@
     },
     'installable': True,
     'auto_install': False,
+    'author': 'netlab',
     'license': 'LGPL-3',
 }

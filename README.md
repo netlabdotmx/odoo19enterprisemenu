@@ -359,9 +359,14 @@ Herencia del template `web.NavBar.AppsMenu` con `t-inherit-mode="extension"` y `
 
 ## Instalación
 
+> **Importante:** la carpeta del módulo debe llamarse `app_menu_enterprise`
+> (no `odoo19enterprisemenu`, el nombre del repo). El manifest carga sus assets
+> con la ruta `app_menu_enterprise/static/...`; con otro nombre de carpeta el
+> módulo se instala pero el menú no aparece.
+
 ```bash
-# 1. Copiar al directorio de addons
-cp -r app_menu_enterprise/ /opt/odoo/extra-addons/
+# 1. Clonar en el directorio de addons con el nombre técnico del módulo
+git clone https://github.com/netlabdotmx/odoo19enterprisemenu.git /opt/odoo/extra-addons/app_menu_enterprise
 
 # 2. Verificar addons_path en /etc/odoo/odoo.conf
 grep addons_path /etc/odoo/odoo.conf
